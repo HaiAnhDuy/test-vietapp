@@ -85,6 +85,8 @@ Email – Địa chỉ email hợp lệ
 
 
 🎯 Hướng dẫn sử dụng
+
+# Trước tiên (kiên quyết): hãy bấm vào "Quản lý Nhân viên" ở thanh SideBar
 ➕ Thêm nhân viên
 
 
