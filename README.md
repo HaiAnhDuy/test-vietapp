@@ -1,73 +1,122 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🧑‍💼 Employee Management System
 
-Currently, two official plugins are available:
+Hệ thống quản lý nhân viên đơn giản được xây dựng bằng **React**, **TypeScript** và **Ant Design**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Công nghệ sử dụng
 
-## React Compiler
+- ⚛️ React 18 – Thư viện UI chính
+- 🟦 TypeScript – Ngôn ngữ lập trình
+- ⚡ Vite – Công cụ build siêu nhanh
+- 🎨 Ant Design – Thư viện UI component
+- 🔁 React Router – Điều hướng trang
+- 📅 Day.js – Thư viện xử lý ngày tháng
+- 🌐 Context API – Quản lý state toàn cục
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 Tính năng
 
-## Expanding the ESLint configuration
+- ✅ Xem danh sách nhân viên
+- ✅ Thêm nhân viên mới
+- ✅ Chỉnh sửa thông tin nhân viên
+- ✅ Xóa nhân viên (kèm xác nhận)
+- ✅ Kiểm tra dữ liệu nhập (validation)
+- ✅ Giao diện responsive
+- ✅ Hiển thị thông báo thành công/lỗi
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Cấu trúc dự án
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+vite-project/
+├── src/
+│   ├── components/
+│   │   └── layout/                   # Header, Footer, Sidebar
+│   ├── contexts/
+│   │   └── EmployeeContext.tsx      # Quản lý state nhân viên
+│   ├── features/
+│   │   └── employees/
+│   │       ├── components/
+│   │       │   ├── EmployeeTable.tsx   # Bảng danh sách nhân viên
+│   │       │   └── EmployeeModal.tsx   # Form thêm/sửa nhân viên
+│   │       ├── types.ts                # Kiểu dữ liệu
+│   │       └── index.tsx               # Export module
+│   ├── data/
+│   │   └── index.ts                # Dữ liệu mẫu
+│   ├── pages/
+│   │   └── EmployeeManagementPage.tsx
+│   ├── App.tsx
+│   └── main.tsx
+└── ...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Cài đặt và chạy dự án
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Clone project
+git clone <repository-url>
+cd vite-project
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Cài đặt dependencies
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Chạy development server
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Build cho production
+npm run build
+
+📝 Thông tin nhân viên
+Mỗi nhân viên bao gồm các trường sau:
+
+
+ID – Mã nhân viên (tự động tạo)
+
+
+Tên – Họ và tên (tối thiểu 2 ký tự)
+
+
+Ngày sinh – Định dạng DD/MM/YYYY
+
+
+Giới tính – Nam / Nữ / Khác
+
+
+Email – Địa chỉ email hợp lệ
+
+
+Địa chỉ – Địa chỉ chi tiết (tối thiểu 5 ký tự)
+
+
+🎯 Hướng dẫn sử dụng
+➕ Thêm nhân viên
+
+
+Nhấn nút "Thêm Nhân Viên"
+
+
+Điền đầy đủ thông tin vào form
+
+
+Nhấn "Thêm" để lưu
+
+
+✏️ Chỉnh sửa nhân viên
+
+
+Nhấn nút "Edit" ở hàng nhân viên
+
+
+Cập nhật thông tin cần thiết
+
+
+Nhấn "Cập Nhật" để lưu
+
+
+🗑️ Xóa nhân viên
+
+
+Nhấn nút "Delete" ở hàng nhân viên
+
+
+Xác nhận trong popup để thực hiện xóa
+
+
+
+💡 Đây là dự án demo với dữ liệu giả lập, có thể mở rộng tích hợp với API thực tế trong tương lai.
