@@ -5,7 +5,7 @@ Hệ thống quản lý nhân viên đơn giản được xây dựng bằng **R
 
 ## 🚀 Công nghệ sử dụng
 
-- ⚛️ React 18 – Thư viện UI chính
+- ⚛️ React 19.2.0 – Thư viện UI chính
 - 🟦 TypeScript – Ngôn ngữ lập trình
 - ⚡ Vite – Công cụ build siêu nhanh
 - 🎨 Ant Design – Thư viện UI component
