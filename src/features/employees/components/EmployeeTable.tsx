@@ -40,6 +40,8 @@ const EmployeeTable: React.FC = () => {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
+            sorter: (a, b) => a.name.localeCompare(b.name),
+            sortDirections: ['ascend', 'descend'],
         },
         {
             title: 'Date of Birth',
@@ -60,6 +62,8 @@ const EmployeeTable: React.FC = () => {
             title: 'Address',
             dataIndex: 'address',
             key: 'address',
+            sorter: (a, b) => a.address.localeCompare(b.address),
+            sortDirections: ['ascend', 'descend'],
         },
         {
             title: 'Action',
