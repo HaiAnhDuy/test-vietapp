@@ -20,7 +20,6 @@ Hệ thống quản lý nhân viên đơn giản được xây dựng bằng **R
 - ✅ Chỉnh sửa thông tin nhân viên
 - ✅ Xóa nhân viên (kèm xác nhận)
 - ✅ Kiểm tra dữ liệu nhập (validation)
-- ✅ Giao diện responsive
 - ✅ Hiển thị thông báo thành công/lỗi
 
 ## 📁 Cấu trúc dự án
